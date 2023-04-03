@@ -1,8 +1,13 @@
 *{
   border:0.5px solid
 }
+:root, body{
+  height: 100%;
+  margin: 0;
+}
 #root{
   background-color: #62919d;
+  height: 100%;
 }
 .App {
   text-align: center;
