@@ -1,6 +1,29 @@
 *{
   border:0.5px solid
 }
+#root{
+  background-color: #62919d;
+}
 .App {
   text-align: center;
+}
+.keyboard-grid{
+  display : grid;
+  grid-template-columns: repeat(4, 100px) ;
+  grid-template-rows: repeat(5, 100px);
+  /* grid-template-areas: 
+  "AC AC / X"
+  "7 8 9 -"
+  "4 5 6 +"
+  "1 2 3 ="
+  "0 0 . ="; */
+}
+.clear{
+  grid-column: span 2;
+}
+.zero{
+  grid-column: span 2;
+}
+.equals{
+  grid-row: span 2;
 }
