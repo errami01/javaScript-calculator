@@ -4,24 +4,33 @@
 :root, body{
   height: 100%;
   margin: 0;
+  color: white;
 }
 #root{
   background-color: #62919d;
   height: 100%;
 }
 .App {
-  text-align: center;
+  /* text-align: center; */
+  background-color: black;
+  width: fit-content;
+  padding: 10px;
 }
 .keyboard-grid{
   display : grid;
-  grid-template-columns: repeat(4, 100px) ;
-  grid-template-rows: repeat(5, 100px);
+  grid-template-columns: repeat(4, 75px) ;
+  grid-template-rows: repeat(5, 75px);
   /* grid-template-areas: 
   "AC AC / X"
   "7 8 9 -"
   "4 5 6 +"
   "1 2 3 ="
   "0 0 . ="; */
+}
+.grid-element{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .clear{
   grid-column: span 2;
@@ -31,4 +40,7 @@
 }
 .equals{
   grid-row: span 2;
+}
+.formula{
+  height: 30px
 }

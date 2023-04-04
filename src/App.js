@@ -5,12 +5,14 @@ function App() {
 
 
   const calcKeys = data.map(({id, value, role})=>{ 
-    return  (<div id={id} className={`${id} ${role}`} key={id} >{value}</div>)
+    return  (<div id={id} className={`${id} ${role} grid-element`} key={id} >{value}</div>)
   })
   return (
     
     <div className="App">
       <div className='calculator'>
+        <div className='formula' value="Hello"></div>
+        <div id='display' className='display'>0</div>
         <div className='keyboard-grid'>
           {calcKeys}
         </div>
