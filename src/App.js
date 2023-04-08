@@ -10,14 +10,13 @@ const formula = useRef([])
 function handleClick(event){
   const input = event.target.innerHTML
   const parsedInput = parseInt(input)
-  // console.log(input)
+  
   if(input === 'AC'){
     formula.current = []
     return setClickOutput([])
   }
 
   if(!isNaN(input)){
-    console.log(parsedInput)
     if(formula.current.indexOf('=')>-1){
       formula.current=[parsedInput]
       return setClickOutput([parsedInput])
@@ -97,8 +96,8 @@ function handleClick(event){
   if(input === 'X'){
     if(clickOutput.length===0) return
     if(formula.current.indexOf('=')>-1){
-      formula.current=[clickOutput, input]
-      return setClickOutput([input])
+      formula.current=[clickOutput, '*']
+      return setClickOutput(['*'])
     }
     if(formula.current[formula.current.length-1]=='-' && isNaN(formula.current[formula.current.length-2])){
       formula.current.pop()
@@ -157,7 +156,7 @@ function handleClick(event){
       }
       formula.current.push('=', product)
        setClickOutput([product])
-       console.log(product)
+      
 
   }
 
