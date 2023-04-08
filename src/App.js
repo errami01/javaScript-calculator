@@ -134,7 +134,7 @@ function handleClick(event){
   if(input === '='){
       if(formula.current.indexOf('=')>-1) return
       let operation = formula.current.join('')
-      const myReg = /[\+\-]?\d+(\.\d+)?([\*\/]\d+(\.\d+)?)+/
+      const myReg = /[\+\-]?\d+(\.\d+)?([\*\/]\-?\d+(\.\d+)?)+/
       const multAndDivSigns =  /[\*\/]/
       const addAndSousSigns = /\d+(\.\d+)?/
       let product = 0;
