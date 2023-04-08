@@ -1,5 +1,5 @@
 *{
-  border:0.5px solid
+  /* border:0.5px solid */
 }
 :root, body{
   height: 100%;
@@ -7,8 +7,12 @@
   color: white;
 }
 #root{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #62919d;
   height: 100%;
+  
 }
 .App {
   /* text-align: center; */
@@ -20,27 +24,41 @@
   display : grid;
   grid-template-columns: repeat(4, 75px) ;
   grid-template-rows: repeat(5, 75px);
-  /* grid-template-areas: 
-  "AC AC / X"
-  "7 8 9 -"
-  "4 5 6 +"
-  "1 2 3 ="
-  "0 0 . ="; */
+  gap: 1px;
 }
 .grid-element{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: dimgray;
+}
+.grid-element:hover{
+  cursor: pointer;
+  border: 0.1px solid orange;
+  transform: scale(1.05);
+}
+.formula{
+  height: 30px;
+  text-align: right;
+  color: orange
+  /* font-size: 0.9em; */
+}
+.display{
+  font-size: 2em;
+  text-align: right;
 }
 .clear{
   grid-column: span 2;
+  background-color: rgb(155, 4, 4);
 }
 .zero{
   grid-column: span 2;
 }
 .equals{
   grid-row: span 2;
+  background-color: rgb(82, 5, 154);
 }
-.formula{
-  height: 30px
+
+.number{
+  background-color: rgb(67, 66, 66);
 }
